@@ -1,4 +1,4 @@
 gideon
 ======
 
-Resources for gideon analysis
+Tools for interacting with gideon
