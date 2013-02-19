@@ -1,3 +1,4 @@
+pathogen,year,country
 Adenovirus infection,1958,Netherlands
 Adenovirus infection,1958,United Kingdom
 Adenovirus infection,1959,China
@@ -1389,8 +1390,8 @@ Chikungunya,2012,Philippines
 Chikungunya,2012,Yemen
 Chikungunya,2013,India
 Chikungunya,2013,Philippines
-Chlamydia infections, misc.,2007,Micronesia
-Chlamydia infections, misc.,2007,United States
+Chlamydia infections misc.,2007,Micronesia
+Chlamydia infections misc.,2007,United States
 Chlamydophila pneumoniae infection,1980,United Kingdom
 Chlamydophila pneumoniae infection,1983,Norway
 Chlamydophila pneumoniae infection,1983,Taiwan
@@ -8784,25 +8785,25 @@ Protothecosis and chlorellosis,2001,Brazil
 Protothecosis and chlorellosis,2011,China
 Pseudocowpox,1981,United States
 Pseudocowpox,2000,Finland
-Pyodermas (impetigo, abscess, etc),1980,United States
-Pyodermas (impetigo, abscess, etc),1983,United States
-Pyodermas (impetigo, abscess, etc),1984,Canada
-Pyodermas (impetigo, abscess, etc),1985,United States
-Pyodermas (impetigo, abscess, etc),1986,Australia
-Pyodermas (impetigo, abscess, etc),1986,Canada
-Pyodermas (impetigo, abscess, etc),1986,United States
-Pyodermas (impetigo, abscess, etc),1990,Canada
-Pyodermas (impetigo, abscess, etc),1992,Japan
-Pyodermas (impetigo, abscess, etc),1993,United States
-Pyodermas (impetigo, abscess, etc),2000,United States
-Pyodermas (impetigo, abscess, etc),2001,United Kingdom
-Pyodermas (impetigo, abscess, etc),2002,United Kingdom
-Pyodermas (impetigo, abscess, etc),2005,Israel
-Pyodermas (impetigo, abscess, etc),2006,United States
-Pyodermas (impetigo, abscess, etc),2007,France
-Pyodermas (impetigo, abscess, etc),2007,Norway
-Pyodermas (impetigo, abscess, etc),2007,United States
-Pyodermas (impetigo, abscess, etc),2011,Israel
+Pyodermas (impetigo abscess etc),1980,United States
+Pyodermas (impetigo abscess etc),1983,United States
+Pyodermas (impetigo abscess etc),1984,Canada
+Pyodermas (impetigo abscess etc),1985,United States
+Pyodermas (impetigo abscess etc),1986,Australia
+Pyodermas (impetigo abscess etc),1986,Canada
+Pyodermas (impetigo abscess etc),1986,United States
+Pyodermas (impetigo abscess etc),1990,Canada
+Pyodermas (impetigo abscess etc),1992,Japan
+Pyodermas (impetigo abscess etc),1993,United States
+Pyodermas (impetigo abscess etc),2000,United States
+Pyodermas (impetigo abscess etc),2001,United Kingdom
+Pyodermas (impetigo abscess etc),2002,United Kingdom
+Pyodermas (impetigo abscess etc),2005,Israel
+Pyodermas (impetigo abscess etc),2006,United States
+Pyodermas (impetigo abscess etc),2007,France
+Pyodermas (impetigo abscess etc),2007,Norway
+Pyodermas (impetigo abscess etc),2007,United States
+Pyodermas (impetigo abscess etc),2011,Israel
 Pyomyositis,1982,Cambodia
 Pyomyositis,1982,Thailand
 Pythiosis,2009,Thailand
