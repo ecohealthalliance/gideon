@@ -1,8 +1,10 @@
-# gideon
+gideon
+======
 
 Tools for interacting with GIDEON.
 
-## first-try
+first-try
+---------
 
 - **gideon_dump.txt** is a copied/pasted list of outbreaks from the site
 - **gideon_parser.py** reformats that list into a nice csv file
