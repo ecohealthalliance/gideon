@@ -4,12 +4,7 @@ import csv
 import bs4
 import lxml
 import re
-# import pdb
-
-# pdb.set_trace()
-
-# We will be using this often.
-Tag = bs4.element.Tag
+import pdb
 
 # Create csv readers
 
@@ -26,70 +21,59 @@ outfile = "gideon-outbreak-urls.csv"
 os.chdir(datadir)
 outbreakhtml = open(indir + infile, 'r')
 
+# Returns true if an item is a bs4 tag.
+def isTag(item):
+    if isinstance(item, bs4.element.Tag):
+        return True
+    return False
+
+# We make our soup and strain out everything that isn't a tag.
 outbreaksoup = bs4.BeautifulSoup(outbreakhtml, "lxml")
-outbreaktags = outbreaksoup.html.body.children
+outbreaktags = [child for child in outbreaksoup.html.body.children 
+                if isTag(child)]
 
+class Pathogen:
+    """Container for outbreak data."""
+    def __init__(self, name):
+        self.name = name
+        self.years = []
+        self.locations = []
+        self.urls = []
+        self.pids = []
+        self.lids = []
 
+# Goes through every tag in the soup.
+    # If it's a <b> tag, it's a pathogen name.
+    # If it's an <ul> tag, it's a list of outbreak years and locations.
+def outbreak_crawl():
+    for tag in outbreaktags:
+        if tag.name is 'b':
+            pathogen = Pathogen(tag.string)
+        elif tag.name is 'ul':
+            handle_ul(tag)
+            write_pathogen_data()
 
-# Dont think we need this:
-# def b_parse(outbreak_b):
-#     """Should set disease name to string of tag"""
-#     outbreak_pathogen = item.string
+# Iterates through <ul> tags that contain year, location and url.
+def handle_ul(ul):
+    ulcontents = [desc for desc in ul.descendants if isTag(desc)]
+    for tag in ulcontents:
+        if tag.name is "b":
+            pathogen.years.append(tag.contents)
+        elif tag.name is "a":
+            pathogen.locations.append(tag.contents)
+            url = tag['href']
+            pathogen.urls.append(url)
+            pathogen.pids.append(pre.match(url).group())
+            pathogen.lids.append(lre.match(url).group())
 
-def ul_scrape(outbreak_ul):
-    """Iterates through <ul>s pulling out year, location and url."""
-    years = []
-    locations = []
-    urls = []
-    pids = []
-    lids = []
-    for desc in outbreak_ul.descendants:
-        if isinstance(desc, Tag) and desc.name is "b":
-            years.append(desc.contents)
-        elif isinstance(desc, Tag) and desc.name is "a":
-            locations.append(desc.contents)
-            url = desc['href']
-            urls.append(url)
-            pids.append(pre.match(url).group())
-            lids.append(lre.match(url).group())
-    return zip(years, locations, urls, pids, lids)
+# Writes out all the data for a particular pathogen.
+def write_pathogen_data():
+    pathogenzip = zip(pathogen.years, pathogen.locations, pathogen.urls,
+                      pathogen.pids, pathogen.lids)
+    for i in pathogenzip:
+        print pathogen.name, i
 
-def writeout(pathogen, outbreaks):
-    """Writes all data for a particular pathogen"""
-    for year, location, url, pid, lid in outbreaks:
-        print pathogen, year, location, url, pid, lid
+# pdb.set_trace()
 
-
-# Use it:
-
-# def main():
-"""Loops through items in soup, passing to functions as
-appropriate"""
-for item in outbreaktags:
-    if isinstance(item, Tag) and item.name is 'b':
-        pathogen = item.string
-    elif isinstance(item, Tag) and item.name is 'ul':
-        outbreakzip = ul_scrape(item)
-        writeout(pathogen, outbreakzip)
-
-# if __name__ == '__main__':
-#     main()
-
-"""Main loop pseudocode:
-
-find pathogens in soup
-    for pathogen in soup
-        pathogen = pathogen
-        find years in pathogen
-        for year in pathogen
-            year = year
-            find outbreaks in year
-            for outbreaks in year
-                country = country
-                url = url
-                countrycode = countrycode
-                pathogencode = pathogencode
-                write csv line with pathogen, year, country, url,
-                                    countrycode, pathogencode
-
-"""
+if __name__ == '__main__':
+    outbreak_crawl()
