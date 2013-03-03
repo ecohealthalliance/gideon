@@ -27,44 +27,49 @@ def isTag(item):
         return True
     return False
 
-# We make our soup and strain out everything that isn't a tag.
 outbreaksoup = bs4.BeautifulSoup(outbreakhtml, "lxml")
-outbreaktags = [child for child in outbreaksoup.html.body.children 
-                if isTag(child)]
 
-class Pathogen:
+class OutbreakData:
     """Container for outbreak data."""
-    def __init__(self, name):
-        self.name = name
+    def __init__(self):
+        self.pathogens = []
         self.years = []
         self.locations = []
         self.urls = []
-        self.pids = []
-        self.lids = []
+        self.pathids = []
+        self.locids = []
 
-# Goes through every tag in the soup.
+    # Goes through every tag in the soup.
     # If it's a <b> tag, it's a pathogen name.
     # If it's an <ul> tag, it's a list of outbreak years and locations.
-def outbreak_crawl():
-    for tag in outbreaktags:
-        if tag.name is 'b':
-            pathogen = Pathogen(tag.string)
-        elif tag.name is 'ul':
-            handle_ul(tag)
-            write_pathogen_data()
+    def outbreak_crawl(self):
+        pathogentags = (tag for tag in outbreaksoup.find_all('b') if
+                        isTag(tag) and tag.a)
+        for tag in pathogentags:
+            pathogen = tag.string
+            ul = tag.next_sibling.next_sibling.next_sibling
+            outbreaks = (desc for desc in ul.descendants if isTag(desc))
+            for tag in outbreaks:
+                if tag.name == "b":
+                    year = tag.contents
+                elif tag.name == "a":
+                    location = tag.contents
+                    url = tag['href']
+                    pathid = re.search('[0-9]{5}', url).group()
+                    locid = re.search('G[0-9]{2,3}', url).group()
+                    self.pathogens.append(pathogen)
+                    self.years.append(year)
+                    self.locations.append(location)
+                    self.urls.append(url)
+                    self.pathids.append(pathid)
+                    self.locids.append(locid)
 
-# Iterates through <ul> tags that contain year, location and url.
-def handle_ul(ul):
-    ulcontents = [desc for desc in ul.descendants if isTag(desc)]
-    for tag in ulcontents:
-        if tag.name is "b":
-            pathogen.years.append(tag.contents)
-        elif tag.name is "a":
-            pathogen.locations.append(tag.contents)
-            url = tag['href']
-            pathogen.urls.append(url)
-            pathogen.pids.append(pre.match(url).group())
-            pathogen.lids.append(lre.match(url).group())
+    def print_all(self):
+        for i in zip(self.pathogens, self.years, self.locations, self.urls, self.pathids, self.locids):
+            print i
+
+
+
 
 # Writes out all the data for a particular pathogen.
 def write_pathogen_data():
@@ -76,4 +81,6 @@ def write_pathogen_data():
 # pdb.set_trace()
 
 if __name__ == '__main__':
-    outbreak_crawl()
+    outbreaks = OutbreakData()
+    outbreaks.outbreak_crawl()
+    outbreaks.print_all()
