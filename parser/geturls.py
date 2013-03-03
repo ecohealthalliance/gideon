@@ -8,26 +8,19 @@ import pdb
 
 # Create csv readers
 
-# Compile regex patterns
-pre = re.compile('[0-9]{5}')
-lre = re.compile('G[0-9]{3}')
 
 datadir = "../data/"
 indir = "raw/"
 outdir = "processed/"
 infile = "gideon-outbreaks-only.html"
-outfile = "gideon-outbreak-urls.csv"
+outfile = "gideon-outbreaks-csv.csv"
 
-os.chdir(datadir)
-outbreakhtml = open(indir + infile, 'r')
 
 # Returns true if an item is a bs4 tag.
 def isTag(item):
     if isinstance(item, bs4.element.Tag):
         return True
     return False
-
-outbreaksoup = bs4.BeautifulSoup(outbreakhtml, "lxml")
 
 class OutbreakData:
     """Container for outbreak data."""
@@ -51,36 +44,38 @@ class OutbreakData:
             outbreaks = (desc for desc in ul.descendants if isTag(desc))
             for tag in outbreaks:
                 if tag.name == "b":
-                    year = tag.contents
+                    year = tag.string
                 elif tag.name == "a":
-                    location = tag.contents
+                    location = tag.string
                     url = tag['href']
                     pathid = re.search('[0-9]{5}', url).group()
                     locid = re.search('G[0-9]{2,3}', url).group()
-                    self.pathogens.append(pathogen)
-                    self.years.append(year)
-                    self.locations.append(location)
+                    self.pathogens.append(str(pathogen))
+                    self.years.append(str(year))
+                    self.locations.append(str(location))
                     self.urls.append(url)
                     self.pathids.append(pathid)
                     self.locids.append(locid)
 
     def print_all(self):
-        for i in zip(self.pathogens, self.years, self.locations, self.urls, self.pathids, self.locids):
+        for i in zip(self.pathogens, self.years, self.locations, self.pathids,
+                     self.locids, self.urls):
             print i
 
 
-
-
-# Writes out all the data for a particular pathogen.
-def write_pathogen_data():
-    pathogenzip = zip(pathogen.years, pathogen.locations, pathogen.urls,
-                      pathogen.pids, pathogen.lids)
-    for i in pathogenzip:
-        print pathogen.name, i
-
-# pdb.set_trace()
-
 if __name__ == '__main__':
+    os.chdir(datadir)
+    outbreakhtml = open(indir + infile, 'r')
+    outbreaksoup = bs4.BeautifulSoup(outbreakhtml, "lxml")
+    outbreakhtml.close()
     outbreaks = OutbreakData()
     outbreaks.outbreak_crawl()
     outbreaks.print_all()
+    outbreakcsv = open(outdir + outfile, 'w+')
+    outbreakwriter = csv.writer(outbreakcsv)
+    headers = ['pathogen', 'year', 'location', 'path_id', 'loc_id', 'url']
+    outbreakwriter.writerow(headers)
+    for row in zip(outbreaks.pathogens, outbreaks.years, outbreaks.locations,
+                   outbreaks.pathids, outbreaks.locids, outbreaks.urls):
+        outbreakwriter.writerow(row)
+    outbreakcsv.close()
