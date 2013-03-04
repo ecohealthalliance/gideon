@@ -13,7 +13,7 @@ datadir = "../data/"
 indir = "raw/"
 outdir = "processed/"
 infile = "gideon-outbreaks-only.html"
-outfile = "gideon-outbreaks-csv.csv"
+outfile = "gideon-outbreaks-csv2maybe.csv"
 
 
 # Returns true if an item is a bs4 tag.
@@ -40,7 +40,11 @@ class OutbreakData:
                         isTag(tag) and tag.a)
         for tag in pathogentags:
             pathogen = tag.string
-            ul = tag.next_sibling.next_sibling.next_sibling
+            # ul = tag.next_sibling.next_sibling.next_sibling
+            for sib in tag.next_siblings:
+                if isTag(sib) and sib.name == 'ul':
+                    ul = sib
+                    break
             outbreaks = (desc for desc in ul.descendants if isTag(desc))
             for tag in outbreaks:
                 if tag.name == "b":
