@@ -13,7 +13,7 @@ datadir = "../data/"
 indir = "raw/"
 outdir = "processed/"
 infile = "gideon-outbreaks-only.html"
-outfile = "gideon-outbreaks-csv2maybe.csv"
+outfile = "gideon-outbreaks-csv2.csv"
 
 
 # Returns true if an item is a bs4 tag.
@@ -61,7 +61,7 @@ class OutbreakData:
                     self.pathids.append(pathid)
                     self.locids.append(locid)
 
-    def print_all(self):
+    def print_current(self):
         for i in zip(self.pathogens, self.years, self.locations, self.pathids,
                      self.locids, self.urls):
             print i
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     outbreakhtml.close()
     outbreaks = OutbreakData()
     outbreaks.outbreak_crawl()
-    outbreaks.print_all()
+    # outbreaks.print_current()
     outbreakcsv = open(outdir + outfile, 'w+')
     outbreakwriter = csv.writer(outbreakcsv)
     headers = ['pathogen', 'year', 'location', 'path_id', 'loc_id', 'url']
