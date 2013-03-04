@@ -3,6 +3,13 @@ gideon
 
 Tools for interacting with GIDEON.
 
+geturls.py
+----------
+
+- Looks for `gideon-outbreaks-only.html` in the `data/raw/` directory.
+- Crawls through the list, gathering for each outbreak pathogen, year, location, url, and the pathogen and location ID.
+- Outputs these to `gideon-outbreaks-csv.csv` in `data/processed`.
+
 first-try
 ---------
 
