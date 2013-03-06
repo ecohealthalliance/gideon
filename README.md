@@ -3,8 +3,21 @@ gideon
 
 Tools for interacting with GIDEON.
 
+gidcommon.py
+------------
+
+Imports `sys`, `os`, and `csv`.
+
+Sets variables:
+
+- `datadir = "../data/"`
+- `indir = "raw/"`
+- `outdir = "processed/"`
+
 geturls.py
 ----------
+
+`geturls.py` extracts a csv table of outbreaks from the html of GIDEON's outbreak list.
 
 - Looks for `gideon-outbreaks-only.html` in the `data/raw/` directory.
 - Crawls through the list, gathering for each outbreak pathogen, year, location, url, and the pathogen and location ID.
