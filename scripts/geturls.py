@@ -4,7 +4,6 @@ import csv
 import bs4
 import lxml
 import re
-import pdb
 
 # Create csv readers
 
@@ -74,7 +73,7 @@ if __name__ == '__main__':
     outbreakhtml.close()
     outbreaks = OutbreakData()
     outbreaks.outbreak_crawl()
-    # outbreaks.print_current()
+    outbreaks.print_current()
     outbreakcsv = open(outdir + outfile, 'w+')
     outbreakwriter = csv.writer(outbreakcsv)
     headers = ['pathogen', 'year', 'location', 'path_id', 'loc_id', 'url']
