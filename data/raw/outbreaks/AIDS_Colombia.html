@@ -1,0 +1,407 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script language="JavaScript">
+	function CloseTimeoutBox() {
+		top.window.ResetCountDown2(74025);
+		document.getElementById('timeout_box').style.display='none';
+	}
+
+        function CloseReloginBox() {
+                document.getElementById('timeout_box').style.display='none';
+                top.window.location = "/login.php?cmd=logout";
+        }
+
+</script>
+
+</head><body bgcolor="#F7F0D9" topmargin="0" leftmargin="0"><div style="color:black;background:transparent;
+     border-color:black;border-width:0px;visibility:visible;display:none;
+     position:fixed;left:10;top:128;
+     _position:absolute;left:10;top:128;" name="timeout_box" id="timeout_box">
+
+<center>
+<table cellspacing="0" cellpadding="0" border="0">
+<tbody><tr><td width="400" valign="top" nowrap="nowrap" height="354" background="/web/images_n/popup_window.jpg" align="center">
+	<br />
+	<table width="360" height="320" cellspacing="3" cellpadding="6" border="0" bgcolor="#ffffff">
+	<tbody><tr><td valign="top" height="250" align="justify" onclick="CloseTimeoutBox();">
+	<img src="/web/images_n/logo_gideon.jpg" />
+	<br />
+	<br />
+	<div align="justify">
+For your safety, your session with GIDEON is about to be timed out if there is
+no additional activity.<br />
+<br />
+If you're still working with GIDEON, please simply click <font color="red"><b>OK</b></font> to resume.
+<br /><br />
+<br /><br />
+<br /><br />
+<center><a href="javascript:CloseTimeoutBox();"><img border="0" title="OK" alt="OK" src="/web/images_n/button_ok.jpg" /></a></center>
+</div>
+	    </td>
+	</tr>
+	</tbody></table>
+    </td>
+</tr>
+</tbody></table>
+</center>
+
+</div> 
+
+
+<div style="color:black;background:transparent;
+     border-color:black;border-width:0px;visibility:visible;display:none;
+     position:fixed;left:10;top:128;
+     _position:absolute;left:10;top:128;" name="logout_box" id="logout_box">
+
+<center>
+<table cellspacing="0" cellpadding="0" border="0">
+<tbody><tr><td width="400" valign="top" height="354" background="/web/images_n/popup_window.jpg" align="center">
+	<br />
+	<table width="360" height="320" cellspacing="3" cellpadding="6" border="0" bgcolor="#ffffff">
+	<tbody><tr><td valign="top" height="250" align="justify" onclick="CloseReloginBox();">
+	<img src="/web/images_n/logo_gideon.jpg" />
+	<br />
+	<br />
+	<div align="justify">
+	You have been logged out of GIDEON due to inactivity. <br />
+	<br />
+	Click <b>OK</b> to log back in.
+<br /><br />
+<br /><br />
+<iframe width="0" scrolling="no" height="0" frameborder="0" marginwidth="0" marginheight="0" name="logout_frame" id="logout_frame"></iframe>
+<br /><br />
+<center><a href="javascript:CloseReloginBox();"><img border="0" title="OK" alt="OK" src="/web/images_n/button_ok.jpg" /></a></center>
+
+</div>
+	    </td>
+	</tr>
+	</tbody></table>
+    </td>
+</tr>
+</tbody></table>
+</center>
+
+</div> 
+
+
+
+<meta content="NOARCHIVE" name="ROBOTS" />
+<title>GIDEON - Epidemiology: AIDS in Colombia</title>
+<link type="text/css" rel="stylesheet" href="../style.css" />
+<style type="text/css">
+	.normalfont{color: #000000; font: 8pt verdana,geneva,arial,helvetica,sans-serif;}
+</style>
+<style>
+BODY{
+scrollbar-face-color:#DDDC9F;
+scrollbar-arrow-color:black;
+scrollbar-shadow-color:#F7B9B9;
+}
+</style>
+<script language="javascript">
+&lt;!--
+
+top.window.ResetCountDown2('74025');
+
+if (document.images)
+{
+
+infoimagedefault = new Image();
+infoimagedefault.src = "../images_n/roll.gif";
+
+infoimagedefaultsave = new Image();
+infoimagedefaultsave.src = "../images_n/roll.gif";
+
+image3on = new Image();
+image3on.src = "../images_n/buttons_print_h.gif";
+
+image3off = new Image();
+image3off.src = "../images_n/buttons_print_i.gif";
+
+infoimage3 = new Image();
+infoimage3.src = "../images_n/buttons_txt_print.gif";
+
+image4on = new Image();
+image4on.src = "../images_n/buttons_email_h.gif";
+
+image4off = new Image();
+image4off.src = "../images_n/buttons_email_i.gif";
+
+infoimage4 = new Image();
+infoimage4.src = "../images_n/buttons_txt_email.gif";
+
+image5on = new Image();
+image5on.src = "../images_n/buttons_save_h.gif";
+
+image5off = new Image();
+image5off.src = "../images_n/buttons_save_i.gif";
+
+infoimage5 = new Image();
+infoimage5.src = "../images_n/buttons_txt_save_note.gif";
+
+image6off = new Image();
+image6off.src = "../images/buttons_zoom_i.gif";
+
+image6on = new Image();
+image6on.src = "../images/buttons_zoom_h.gif";
+
+infoimage6 = new Image();
+infoimage6.src = "../images/buttons_txt_zoom_note.gif";
+
+
+}
+
+function changeImages() 
+{
+    if (document.images)
+    {
+        for (var i=0; i&lt;changeImages.arguments.length; i+=2)
+        { document[changeImages.arguments[i]].src = eval (changeImages.arguments[i+1] + ".src");
+        }
+    }
+}
+
+function OpenWin2(graph_id) {
+	url = "../gdn_graph.php?graph_id=" + graph_id;
+	newWindow = window.open(url, "large", "width=700,height=550,dependent=yes,directories=no,hotkeys=no,location=no,menubar=no,personalbar=no,resizable=yes,status=no,toolbar=no,scrollbars=yes");
+    newWindow.focus()
+}
+
+function OpenRef(id,source) {
+        url = "../show_reference.php?fsm=abstract&amp;id=" + id + "&amp;country_id=G142&amp;disease_id=10040&amp;source=" + source;
+        newWindow = window.open(url, "refwin", "width=700,height=550,dependent=yes,directories=no,hotkeys=no,location=no,menubar=no,personalbar=no,resizable=yes,status=no,toolbar=no,scrollbars=yes");
+    newWindow.focus()
+}
+
+
+function OpenWin(cid,cname,did) {
+	url = "country_info_large.php?country_id=" + cid + "&amp;country_name=" + escape(cname) + "&amp;disease_id=" + did;
+	newWindow = window.open(url, "large", "width=550,height=450,dependent=yes,directories=no,hotkeys=no,location=no,menubar=no,personalbar=no,resizable=yes,status=no,toolbar=no,scrollbars=yes");
+    newWindow.focus()
+}
+
+function selectCountry(idx) {
+	parent.listcountries.document.countryForm.country.options[idx].selected  = true;
+	parent.listcountries.showCountryInfo(idx);
+}
+
+function selectCountryOther(idx,type) {
+	parent.listcountries.document.countryForm.country.options[idx].selected  = true;
+	parent.listcountries.showCountryInfoOther(idx,type);
+}
+
+// --&gt;
+
+</script>
+
+
+
+
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tbody><tr><td valign="top">
+<table width="457" cellspacing="0" cellpadding="0" border="0" bgcolor="ffffff">
+  <tbody><tr>
+    <td bgcolor="#A2A377"><img width="1" height="1" border="0" alt="" src="../images_n/clr.gif" /></td>
+    <td width="100%">
+	<table width="100%" cellspacing="0" cellpadding="5" border="0">
+	<tbody><tr><td>
+	<span class="normalfont"><center><b>AIDS in Colombia</b></center>
+<br />
+The first cases of AIDS were officially reported in 1986. 
+<br />
+<br /><a href="javascript:OpenWin2('1776.01');">[Graph 1776.01]</a>
+<br />Colombia. AIDS, cases
+<br /><table width="445" cellspacing="0" cellpadding="3" border="1">
+<tbody><tr bgcolor="#ffffcc">
+<td align="center"><b>1982</b></td><td align="center"><b>1983</b></td><td align="center"><b>1984</b></td><td align="center"><b>1985</b></td><td align="center"><b>1986</b></td><td align="center"><b>1987</b></td></tr><tr>
+<td align="right">0</td><td align="right">3</td><td align="right">12</td><td align="right">16</td><td align="right">148</td><td align="right">300</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>1988</b></td><td align="center"><b>1990</b></td><td align="center"><b>1991</b></td><td align="center"><b>1992</b></td><td align="center"><b>1993</b></td><td align="center"><b>1994</b></td></tr><tr>
+<td align="right">338</td><td align="right">771</td><td align="right">870</td><td align="right">934</td><td align="right">740</td><td align="right">1,361</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>1995</b></td><td align="center"><b>1996</b></td><td align="center"><b>1997</b></td><td align="center"><b>1998</b></td><td align="center"><b>1999</b></td><td align="center"><b>2001</b></td></tr><tr>
+<td align="right">932</td><td align="right">1,095</td><td align="right">828</td><td align="right">1,026</td><td align="right">547</td><td align="right">933</td></tr>
+</tbody></table>
+<br />
+<br /><a href="javascript:OpenWin2('1776.02');">[Graph 1776.02]</a>
+<br />Colombia. AIDS, cumulative cases
+<br /><table width="445" cellspacing="0" cellpadding="3" border="1">
+<tbody><tr bgcolor="#ffffcc">
+<td align="center"><b>1982</b></td><td align="center"><b>1983</b></td><td align="center"><b>1984</b></td><td align="center"><b>1985</b></td><td align="center"><b>1986</b></td><td align="center"><b>1987</b></td></tr><tr>
+<td align="right">0</td><td align="right">3</td><td align="right">15</td><td align="right">31</td><td align="right">179</td><td align="right">479</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>1988</b></td><td align="center"><b>1990</b></td><td align="center"><b>1991</b></td><td align="center"><b>1992</b></td><td align="center"><b>1993</b></td><td align="center"><b>1994</b></td></tr><tr>
+<td align="right">878</td><td align="right">1,478</td><td align="right">2,348</td><td align="right">3,282</td><td align="right">4,022</td><td align="right">5,383</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>1995</b></td><td align="center"><b>1996</b></td><td align="center"><b>1997</b></td><td align="center"><b>1998</b></td><td align="center"><b>1999</b></td></tr><tr>
+<td align="right">6,315</td><td align="right">7,410</td><td align="right">8,238</td><td align="right">9,264</td><td align="right">9,811</td></tr>
+</tbody></table>
+<br />Notes:
+<br />1. The true number of AIDS cases to December 1997 was estimated at 12,000, with 10,000 AIDS deaths.
+<br />2. Santa Fe de Bogota accounted for 46.4% of cases to December 1996; Antioquia for 15%.
+<br />
+<br /><b>Demography and risk factors:</b>
+<br /> - Cases reported during 1996 to 1997: 48% heterosexual; 48% men who have sex with men; 0% IDU; 0% transfusion/hemophilia; 3% mother to infant.
+<br /> - Cases reported to May 1998: 89% ages 15 to 49; 91% males.
+<br /> - Cases during 1997 to 1999: 89% ages 15 to 49; 86% males; 72% heterosexual; 23% men who have sex with men; 0% IDU; 0% transfusion/hemophilia; 4% mother to infant.  
+<br />
+<br /><a href="javascript:OpenWin2('1776.03');">[Graph 1776.03]</a>
+<br />Colombia. AIDS, estimated deaths
+<br /><table width="445" cellspacing="0" cellpadding="3" border="1">
+<tbody><tr bgcolor="#ffffcc">
+<td align="center"><b>1997</b></td><td align="center"><b>1999</b></td><td align="center"><b>2001</b></td><td align="center"><b>2003</b></td><td align="center"><b>2005</b></td><td align="center"><b>2009</b></td></tr><tr>
+<td align="right">3,000</td><td align="right">1,700</td><td align="right">13,000</td><td align="right">6,800</td><td align="right">8,200</td><td align="right">14,000</td></tr>
+</tbody></table>
+<br />Notes:
+<br />1. 2,800 AIDS orphans were estimated to December 1999; 21,000 in 2001.
+<br />2. 3,226 AIDS deaths were officially reported through 1996; 3,705 to January 2001.
+<br />
+<br />Eight cases of transfusion-acquired infection were estimated for 1993; 285 in 1994; 0 in 1995. 
+<br />
+<br /><b>Seroprevalence <a name="surveys"></a>surveys:</b>
+<br />     20% of men who have sex with men (Bogota, 2001)
+<br />     0.20% of blood donors (1994).
+<br />     1.8% of multiply-transfused patients in Bogota and Medellin (2003) <a href="javascript:OpenRef('20128348','p');"><sup><b>1</b></sup></a>
+<br />     0.5% of urban pregnant women (1994); 0.1% of rural pregnant women (1999).
+<br />     0.4% of prisoners (1990)
+<br />     14.6% of STD patients (1986).
+<br />     1.1% of CSW in 1994; 0.7% (Bogota) in 2002; 1.6% (Bogota) in 2008
+<br />     0% of Dominican and Colombian CSW in Italy (Catania, Sicily, 2006 publication) <a href="javascript:OpenRef('16924411','p');"><sup><b>2</b></sup></a>
+<br />
+<br /><a href="javascript:OpenWin2('1776.04');">[Graph 1776.04]</a>
+<br />Colombia. HIV seropositivity rates per 100,000 blood donors
+<br /><table width="445" cellspacing="0" cellpadding="3" border="1">
+<tbody><tr bgcolor="#ffffcc">
+<td align="center"><b>1993</b></td><td align="center"><b>1994</b></td><td align="center"><b>1995</b></td><td align="center"><b>1997</b></td><td align="center"><b>1999</b></td><td align="center"><b>2001</b></td></tr><tr>
+<td align="right">0</td><td align="right">0</td><td align="right">0</td><td align="right">0</td><td align="right">0</td><td align="right">0</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>2002</b></td></tr><tr>
+<td align="right">0</td></tr>
+</tbody></table>
+<br />
+<br /><a href="javascript:OpenWin2('1776.05');">[Graph 1776.05]</a>
+<br />Colombia. HIV-AIDS, cases
+<br /><table width="445" cellspacing="0" cellpadding="3" border="1">
+<tbody><tr bgcolor="#ffffcc">
+<td align="center"><b>2002</b></td><td align="center"><b>2003</b></td><td align="center"><b>2004</b></td><td align="center"><b>2005</b></td><td align="center"><b>2006</b></td><td align="center"><b>2007</b></td></tr><tr>
+<td align="right">2,171</td><td align="right">1,898</td><td align="right">3,177</td><td align="right">3,976</td><td align="right">4,312</td><td align="right">4,542</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>2008</b></td><td align="center"><b>2009</b></td><td align="center"><b>2010</b></td><td align="center"><b>2011</b></td></tr><tr>
+<td align="right">4,512</td><td align="right">8,094</td><td align="right">7,614</td><td align="right">7,964</td></tr>
+</tbody></table>
+<br />Notes:
+<br />1. 34,033 HIV-positives were reported to December 2002.
+<br />
+<br /><a href="javascript:OpenWin2('1776.06');">[Graph 1776.06]</a>
+<br />Colombia. AIDS - estimated living with HIV/AIDS, cases
+<br /><table width="445" cellspacing="0" cellpadding="3" border="1">
+<tbody><tr bgcolor="#ffffcc">
+<td align="center"><b>1994</b></td><td align="center"><b>1997</b></td><td align="center"><b>1999</b></td><td align="center"><b>2001</b></td><td align="center"><b>2003</b></td><td align="center"><b>2005</b></td></tr><tr>
+<td align="right">40,000</td><td align="right">72,000</td><td align="right">71,000</td><td align="right">210,000</td><td align="right">140,000</td><td align="right">160,000</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>2009</b></td></tr><tr>
+<td align="right">160,000</td></tr>
+</tbody></table>
+<br />Notes:
+<br />1. Number for 1997 represents 0.36% of adults ages 15 to 49; 0.4% in 2001; 0.7% in 2003.
+<br />
+<br /><b>Associated infections:</b>
+<br /> - 6.5% of HIV-positive patients have tuberculosis (Cali, 1991 to 1992). <a href="javascript:OpenRef('10572475','p');"><sup><b>3</b></sup></a>
+<br />   11.9% of tuberculosis patients in Bogota are HIV-positive. (2001). <a href="javascript:OpenRef('15495581','p');"><sup><b>4</b></sup></a>
+<br /> - 38.6% of patients with HIV infection in Medellin are HBV-positive, and 0.8% are HCV-positive <a href="javascript:OpenRef('17221128','p');"><sup><b>5</b></sup></a>
+<br /> - 10.4% of HIV-positive patients in Bogota are infested by <i>Cryptosporidium</i>, 25.2% <i>Blastocystis hominis</i>, 3.5% <i>Microsporidium</i> and 13% <i>Entamoeba histolytica</i> (2001). <a href="javascript:OpenRef('14582330','p');"><sup><b>6</b></sup></a>
+<br />   3.9% of HIV-positive patients in Medellin are infested by <i>Microsporidium</i> (2001 to 2002). <a href="javascript:OpenRef('15678801','p');"><sup><b>7</b></sup></a>
+<br /> - 931 cases of cryptococcosis were reported in Colombia over 9 years in a national survey (240 cases per 100, 000 per year; 300 per 100, 000 per year among AIDS patients).  78.1% were HIV-positive and 82.7% were male. (1997 to 2005) <a href="javascript:OpenRef('17546227','p');"><sup><b>8</b></sup></a>
+<br /> - Two cases (1995 and 1997) of superinfection by paracoccidioidomycosis in AIDS patients have been reported. <a href="javascript:OpenRef('10436658','p');"><sup><b>9</b></sup></a>
+<br />
+<br /><b><a name="outbreaks"></a>Notable outbreaks:</b>
+<br />     1993 - An outbreak (13 cases) of HIV infection was reported at a dialysis center. <a href="javascript:OpenRef('7760615','p');"><sup><b>10</b></sup></a><br /><br /><b><a href="javascript:OpenRef('10040','G142');">List of all references</a></b><br />
+</span>
+	</td></tr>
+	</tbody></table>
+	
+	</td>
+    <td bgcolor="#A2A377"><img width="1" height="1" border="0" alt="" src="../images_n/clr.gif" /></td>
+    <td width="38" valign="top" bgcolor="#F7F0D9">
+	 
+		<a onmouseout="changeImages('image6', 'image6off', 'infoimage5', 'infoimagedefaultsave')" onmouseover="changeImages('image6', 'image6on', 'infoimage5', 'infoimage6')" href="javascript:OpenWin('G142','Colombia','10040');"><img border="0" name="image6" src="../images/buttons_zoom_i.gif" alt="Zoom" title="Zoom" /></a>
+	     </td>
+  </tr>
+  <tr>
+    <td bgcolor="#A2A377" colspan="3"><img width="1" height="1" border="0" alt="" src="../images_n/clr.gif" /></td>
+    <td bgcolor="#F7F0D9"></td>
+    
+  </tr>
+</tbody></table>
+<br />
+<form name="noteForm" method="post">
+<table width="457" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td bgcolor="#F7F0D9" colspan="5">
+<!-- nested top row for rollover text -->
+<table cellspacing="0" cellpadding="0" border="0" bg="DDDC9F">
+	<tbody><tr>
+		<td><img width="136" height="16" border="0" src="../images_n/Gideon_Epidemio_personal_tab.gif" title="Personal Notes" alt="Personal Notes" /></td>
+		<td width="100%"></td>
+		<td><img width="81" height="16" border="0" name="infoimage5" src="../images_n/roll.gif" /></td>
+	</tr>
+</tbody></table>
+<!-- end nested top row -->
+	</td>
+  </tr>
+  <tr>
+    <td bgcolor="A2A377" colspan="2"><img width="1" height="1" border="0" src="../images_n/A2A377.gif" /></td>
+	<td bgcolor="#F7F0D9"><img width="1" height="1" border="0" src="../images_n/clr.gif" /></td>
+    <td bgcolor="#DDDC9F"><img width="1" height="1" border="0" src="../images_n/clr.gif" /></td>
+	<td bgcolor="#A2A377"><img width="1" height="1" border="0" src="../images_n/A2A377.gif" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="A2A377"><img width="1" height="1" border="0" src="../images_n/A2A377.gif" /></td>
+    <td valign="top" height="100%">
+<!-- nested center table -->	
+	<table cellspacing="0" cellpadding="0" border="0" bgcolor="#F7F0D9">
+	<tbody><tr>
+		<td valign="top"><textarea wrap="VIRTUAL" scroll="auto" cols="66" rows="5" name="txt" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid; BORDER-COLOR: ffffff" class="b"></textarea></td>
+	</tr>
+</tbody></table>
+<!-- end nested center table -->
+	</td>
+    <td bgcolor="A2A377"><img width="1" height="1" border="0" src="../images_n/A2A377.gif" /></td>
+    <td width="38" valign="top" bgcolor="DDDC9F"><a onmouseout="changeImages('image5', 'image5off', 'infoimage5', 'infoimagedefaultsave')" onmouseover="changeImages('image5', 'image5on', 'infoimage5', 'infoimage5')" href="javascript:savePersonalNotes()">
+<img width="38" height="32" border="0" name="image5" alt="Save note" title="Save note" src="../images_n/buttons_save_i.gif" /></a><br /><br /></td>
+    <td bgcolor="A2A377"><img width="1" height="1" border="0" src="../images_n/A2A377.gif" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="A2A377" colspan="5"><img width="1" height="1" border="0" src="../images_n/A2A377.gif" /></td>
+  </tr>
+</tbody></table>
+</form>
+</td>
+<td width="6"><img width="6" src="/images/spacer.gif" /></td>
+<td valign="top">
+<font face="arial,sans-serif" color="#000000" style="font-size:11px">Ads only display in free trial</font><br />
+<script type="text/javascript">&lt;!--
+google_ad_client = "pub-4506717501061964";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text";
+//2006-12-19: gideon - web
+google_ad_channel = "7350424146";
+google_color_border = "F7F0D9";
+google_color_bg = "F7F0D9";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--&gt;</script>
+<script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">
+  </script><ins style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><ins style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px" id="aswift_0_anchor"><iframe width="160" scrolling="no" height="600" frameborder="0" style="left:0;position:absolute;top:0;" name="aswift_0" id="aswift_0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" allowtransparency="true" hspace="0" vspace="0" marginheight="0" marginwidth="0"></iframe></ins></ins>
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+</body></html>

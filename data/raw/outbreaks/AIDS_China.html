@@ -1,0 +1,552 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script language="JavaScript">
+	function CloseTimeoutBox() {
+		top.window.ResetCountDown2(74025);
+		document.getElementById('timeout_box').style.display='none';
+	}
+
+        function CloseReloginBox() {
+                document.getElementById('timeout_box').style.display='none';
+                top.window.location = "/login.php?cmd=logout";
+        }
+
+</script>
+
+</head><body bgcolor="#F7F0D9" topmargin="0" leftmargin="0"><div style="color:black;background:transparent;
+     border-color:black;border-width:0px;visibility:visible;display:none;
+     position:fixed;left:10;top:128;
+     _position:absolute;left:10;top:128;" name="timeout_box" id="timeout_box">
+
+<center>
+<table cellspacing="0" cellpadding="0" border="0">
+<tbody><tr><td width="400" valign="top" nowrap="nowrap" height="354" background="/web/images_n/popup_window.jpg" align="center">
+	<br />
+	<table width="360" height="320" cellspacing="3" cellpadding="6" border="0" bgcolor="#ffffff">
+	<tbody><tr><td valign="top" height="250" align="justify" onclick="CloseTimeoutBox();">
+	<img src="/web/images_n/logo_gideon.jpg" />
+	<br />
+	<br />
+	<div align="justify">
+For your safety, your session with GIDEON is about to be timed out if there is
+no additional activity.<br />
+<br />
+If you're still working with GIDEON, please simply click <font color="red"><b>OK</b></font> to resume.
+<br /><br />
+<br /><br />
+<br /><br />
+<center><a href="javascript:CloseTimeoutBox();"><img border="0" title="OK" alt="OK" src="/web/images_n/button_ok.jpg" /></a></center>
+</div>
+	    </td>
+	</tr>
+	</tbody></table>
+    </td>
+</tr>
+</tbody></table>
+</center>
+
+</div> 
+
+
+<div style="color:black;background:transparent;
+     border-color:black;border-width:0px;visibility:visible;display:none;
+     position:fixed;left:10;top:128;
+     _position:absolute;left:10;top:128;" name="logout_box" id="logout_box">
+
+<center>
+<table cellspacing="0" cellpadding="0" border="0">
+<tbody><tr><td width="400" valign="top" height="354" background="/web/images_n/popup_window.jpg" align="center">
+	<br />
+	<table width="360" height="320" cellspacing="3" cellpadding="6" border="0" bgcolor="#ffffff">
+	<tbody><tr><td valign="top" height="250" align="justify" onclick="CloseReloginBox();">
+	<img src="/web/images_n/logo_gideon.jpg" />
+	<br />
+	<br />
+	<div align="justify">
+	You have been logged out of GIDEON due to inactivity. <br />
+	<br />
+	Click <b>OK</b> to log back in.
+<br /><br />
+<br /><br />
+<iframe width="0" scrolling="no" height="0" frameborder="0" marginwidth="0" marginheight="0" name="logout_frame" id="logout_frame"></iframe>
+<br /><br />
+<center><a href="javascript:CloseReloginBox();"><img border="0" title="OK" alt="OK" src="/web/images_n/button_ok.jpg" /></a></center>
+
+</div>
+	    </td>
+	</tr>
+	</tbody></table>
+    </td>
+</tr>
+</tbody></table>
+</center>
+
+</div> 
+
+
+
+<meta content="NOARCHIVE" name="ROBOTS" />
+<title>GIDEON - Epidemiology: AIDS in China</title>
+<link type="text/css" rel="stylesheet" href="../style.css" />
+<style type="text/css">
+	.normalfont{color: #000000; font: 8pt verdana,geneva,arial,helvetica,sans-serif;}
+</style>
+<style>
+BODY{
+scrollbar-face-color:#DDDC9F;
+scrollbar-arrow-color:black;
+scrollbar-shadow-color:#F7B9B9;
+}
+</style>
+<script language="javascript">
+&lt;!--
+
+top.window.ResetCountDown2('74025');
+
+if (document.images)
+{
+
+infoimagedefault = new Image();
+infoimagedefault.src = "../images_n/roll.gif";
+
+infoimagedefaultsave = new Image();
+infoimagedefaultsave.src = "../images_n/roll.gif";
+
+image3on = new Image();
+image3on.src = "../images_n/buttons_print_h.gif";
+
+image3off = new Image();
+image3off.src = "../images_n/buttons_print_i.gif";
+
+infoimage3 = new Image();
+infoimage3.src = "../images_n/buttons_txt_print.gif";
+
+image4on = new Image();
+image4on.src = "../images_n/buttons_email_h.gif";
+
+image4off = new Image();
+image4off.src = "../images_n/buttons_email_i.gif";
+
+infoimage4 = new Image();
+infoimage4.src = "../images_n/buttons_txt_email.gif";
+
+image5on = new Image();
+image5on.src = "../images_n/buttons_save_h.gif";
+
+image5off = new Image();
+image5off.src = "../images_n/buttons_save_i.gif";
+
+infoimage5 = new Image();
+infoimage5.src = "../images_n/buttons_txt_save_note.gif";
+
+image6off = new Image();
+image6off.src = "../images/buttons_zoom_i.gif";
+
+image6on = new Image();
+image6on.src = "../images/buttons_zoom_h.gif";
+
+infoimage6 = new Image();
+infoimage6.src = "../images/buttons_txt_zoom_note.gif";
+
+
+}
+
+function changeImages() 
+{
+    if (document.images)
+    {
+        for (var i=0; i&lt;changeImages.arguments.length; i+=2)
+        { document[changeImages.arguments[i]].src = eval (changeImages.arguments[i+1] + ".src");
+        }
+    }
+}
+
+function OpenWin2(graph_id) {
+	url = "../gdn_graph.php?graph_id=" + graph_id;
+	newWindow = window.open(url, "large", "width=700,height=550,dependent=yes,directories=no,hotkeys=no,location=no,menubar=no,personalbar=no,resizable=yes,status=no,toolbar=no,scrollbars=yes");
+    newWindow.focus()
+}
+
+function OpenRef(id,source) {
+        url = "../show_reference.php?fsm=abstract&amp;id=" + id + "&amp;country_id=G140&amp;disease_id=10040&amp;source=" + source;
+        newWindow = window.open(url, "refwin", "width=700,height=550,dependent=yes,directories=no,hotkeys=no,location=no,menubar=no,personalbar=no,resizable=yes,status=no,toolbar=no,scrollbars=yes");
+    newWindow.focus()
+}
+
+
+function OpenWin(cid,cname,did) {
+	url = "country_info_large.php?country_id=" + cid + "&amp;country_name=" + escape(cname) + "&amp;disease_id=" + did;
+	newWindow = window.open(url, "large", "width=550,height=450,dependent=yes,directories=no,hotkeys=no,location=no,menubar=no,personalbar=no,resizable=yes,status=no,toolbar=no,scrollbars=yes");
+    newWindow.focus()
+}
+
+function selectCountry(idx) {
+	parent.listcountries.document.countryForm.country.options[idx].selected  = true;
+	parent.listcountries.showCountryInfo(idx);
+}
+
+function selectCountryOther(idx,type) {
+	parent.listcountries.document.countryForm.country.options[idx].selected  = true;
+	parent.listcountries.showCountryInfoOther(idx,type);
+}
+
+// --&gt;
+
+</script>
+
+
+
+
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tbody><tr><td valign="top">
+<table width="457" cellspacing="0" cellpadding="0" border="0" bgcolor="ffffff">
+  <tbody><tr>
+    <td bgcolor="#A2A377"><img width="1" height="1" border="0" alt="" src="../images_n/clr.gif" /></td>
+    <td width="100%">
+	<table width="100%" cellspacing="0" cellpadding="5" border="0">
+	<tbody><tr><td>
+	<span class="normalfont"><center><b>AIDS in China</b></center>
+<br />
+<b>Time and Place:</b>
+<br /> - The first case of HIV infection was ascribed to factor VIII imported from the United States in 1983.  
+<br /> - The first case of AIDS was reported in 1985. 
+<br />
+<br /><a href="javascript:OpenWin2('1811.01');">[Graph 1811.01]</a>
+<br />China. AIDS, cases
+<br /><table width="445" cellspacing="0" cellpadding="3" border="1">
+<tbody><tr bgcolor="#ffffcc">
+<td align="center"><b>1984</b></td><td align="center"><b>1985</b></td><td align="center"><b>1986</b></td><td align="center"><b>1987</b></td><td align="center"><b>1988</b></td><td align="center"><b>1989</b></td></tr><tr>
+<td align="right">0</td><td align="right">1</td><td align="right">0</td><td align="right">2</td><td align="right">0</td><td align="right">0</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>1990</b></td><td align="center"><b>1991</b></td><td align="center"><b>1992</b></td><td align="center"><b>1993</b></td><td align="center"><b>1994</b></td><td align="center"><b>1995</b></td></tr><tr>
+<td align="right">2</td><td align="right">3</td><td align="right">5</td><td align="right">23</td><td align="right">29</td><td align="right">52</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>1996</b></td><td align="center"><b>1997</b></td><td align="center"><b>1998</b></td><td align="center"><b>1999</b></td><td align="center"><b>2000</b></td><td align="center"><b>2001</b></td></tr><tr>
+<td align="right">38</td><td align="right">126</td><td align="right">136</td><td align="right">230</td><td align="right">233</td><td align="right">231</td></tr>
+</tbody></table>
+<br />
+<br /><a href="javascript:OpenWin2('1811.02');">[Graph 1811.02]</a>
+<br />China. AIDS, cumulative cases
+<br /><table width="445" cellspacing="0" cellpadding="3" border="1">
+<tbody><tr bgcolor="#ffffcc">
+<td align="center"><b>1984</b></td><td align="center"><b>1985</b></td><td align="center"><b>1986</b></td><td align="center"><b>1987</b></td><td align="center"><b>1988</b></td><td align="center"><b>1989</b></td></tr><tr>
+<td align="right">0</td><td align="right">1</td><td align="right">1</td><td align="right">3</td><td align="right">3</td><td align="right">3</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>1990</b></td><td align="center"><b>1991</b></td><td align="center"><b>1992</b></td><td align="center"><b>1993</b></td><td align="center"><b>1994</b></td><td align="center"><b>1995</b></td></tr><tr>
+<td align="right">5</td><td align="right">8</td><td align="right">13</td><td align="right">36</td><td align="right">65</td><td align="right">117</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>1996</b></td><td align="center"><b>1997</b></td><td align="center"><b>1998</b></td><td align="center"><b>1999</b></td><td align="center"><b>2000</b></td><td align="center"><b>2001</b></td></tr><tr>
+<td align="right">155</td><td align="right">281</td><td align="right">417</td><td align="right">647</td><td align="right">880</td><td align="right">1,111</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>2002</b></td></tr><tr>
+<td align="right">1,490</td></tr>
+</tbody></table>
+<br />Notes:
+<br />1. Review of AIDS in China (2004 publication) - see reference <a href="javascript:OpenRef('15262561','p');"><sup><b>1</b></sup></a>
+<br />
+<br /><b>Demography and risk factors:</b>
+<br /> - Cases reported to March 1998: 91% ages 13 to 49; 94% males; 17% heterosexual; 5% men who have sex with men; 59% IDU; 20% transfusion or hemophilia-related. 
+<br /> - Cases during 1996 to 1998: 98% ages 13 to 49; 83% males; 22% heterosexual; 0% men who have sex with men; 58% IDU; 18% transfusion-related; 1% mother-to-infant.
+<br /> - Cases during 1998 to 2000: 87% males; 34% heterosexual; 1% men who have sex with men; 60% IDU; 2% transfusion-related; 1% mother-to-infant.
+<br /> - Cases during 1997 to 2001: 91% ages 15 to 49; 78% males; 28% heterosexual; 1% men who have sex with men; 48% IDU; 6% transfusion/hemophilia; 1% mother to infant.
+<br />
+<br />Students ages 15 to 24 accounted for 0.39% of HIV/AIDS cases in 2006, 0.50% in 2007, 0.83% in 2008 and 1.02% in 2009. <a href="javascript:OpenRef('21162868','p');"><sup><b>2</b></sup></a>
+<br />
+<br />The true number of AIDS cases to December 1997 is estimated at 9,000, with 6,400 AIDS deaths.
+<br />
+<br /><a href="javascript:OpenWin2('1811.03');">[Graph 1811.03]</a>
+<br />China. AIDS, estimated deaths
+<br /><table width="445" cellspacing="0" cellpadding="3" border="1">
+<tbody><tr bgcolor="#ffffcc">
+<td align="center"><b>1997</b></td><td align="center"><b>1999</b></td><td align="center"><b>2001</b></td><td align="center"><b>2003</b></td><td align="center"><b>2005</b></td><td align="center"><b>2007</b></td></tr><tr>
+<td align="right">4,000</td><td align="right">17,000</td><td align="right">30,000</td><td align="right">26,000</td><td align="right">31,000</td><td align="right">20,000</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>2009</b></td></tr><tr>
+<td align="right">26,000</td></tr>
+</tbody></table>
+<br />Notes:
+<br />1. 4,500 AIDS orphans were estimated to December 1999; 76,000 in 2001.
+<br />
+<br />Injecting drug abusers (notably in Yunnan) account for most seropositives. 
+<br />
+<br />HIV incidence among female sex workers in Sichuan Province was 1 per 100 person-years over a 6 months' follow-up period. (2004, Xixhang county) <a href="javascript:OpenRef('17402192','p');"><sup><b>3</b></sup></a>
+<br /> - The incidence of new infection among MSM in Beijing was 2.6 per 100 person-years (2006 to 2007) <a href="javascript:OpenRef('19710617','p');"><sup><b>4</b></sup></a> <a href="javascript:OpenRef('20731610','p');"><sup><b>5</b></sup></a> ; 5.12 per 100 person-years in Nanjing (2010 publication) <a href="javascript:OpenRef('20182406','p');"><sup><b>6</b></sup></a> ; 5.4 per 100 person-years in Shenyang (2010 publication) <a href="javascript:OpenRef('20375928','p');"><sup><b>7</b></sup></a>
+<br /> - The rate among MSM during 18 months' follow-up was 3.5 per 100 patient-years (Yunnan, 2009 to 2011). <a href="javascript:OpenRef('23286213','p');"><sup><b>8</b></sup></a>
+<br /> - A subsequent study documented rates of new infection among MSM in Beijing at 8.09 per 100 person-years (2009). <a href="javascript:OpenRef('23166133','p');"><sup><b>9</b></sup></a>
+<br />
+<br />The ratio of known/estimated seropositives as of 1995 was 1,550/15,000. 
+<br /> - 531 new seropositives were reported in 1994. Cumulative reported seropositives to 1996 numbered 5,996, of which 69.4% were reported during 1995 to 1996.  A total of 10,676 seropositives were reported to 1998; 30,736 to December 2001.  
+<br /> - 102 cases of HIV infection were reported in Guangdong Province in 1997; 4,593 in 2007 - IDU accounting for 81% of male cases. <a href="javascript:OpenRef('19390507','p');"><sup><b>10</b></sup></a>
+<br />     
+<br /><a href="javascript:OpenWin2('1811.04');">[Graph 1811.04]</a>
+<br />China. AIDS - estimated living with HIV/AIDS, cases
+<br /><table width="445" cellspacing="0" cellpadding="3" border="1">
+<tbody><tr bgcolor="#ffffcc">
+<td align="center"><b>1995</b></td><td align="center"><b>1997</b></td><td align="center"><b>1999</b></td><td align="center"><b>2000</b></td><td align="center"><b>2001</b></td><td align="center"><b>2003</b></td></tr><tr>
+<td align="right">100,000</td><td align="right">400,000</td><td align="right">500,000</td><td align="right">600,000</td><td align="right">850,000</td><td align="right">530,000</td></tr>
+<tr bgcolor="#ffffcc">
+<td align="center"><b>2005</b></td><td align="center"><b>2007</b></td><td align="center"><b>2009</b></td></tr><tr>
+<td align="right">650,000</td><td align="right">700,000</td><td align="right">740,000</td></tr>
+</tbody></table>
+<br />Notes:
+<br />1. Number for 1997 represented 0.06% of all adults; 0.1% in 2001; 0.1% in 2003.
+<br />   Individual years:
+<br />   2007 - See reference <a href="javascript:OpenRef('19214116','p');"><sup><b>11</b></sup></a>
+<br />
+<br /><b>Seroprevalence <a name="surveys"></a>surveys:</b>
+<br />     0.75% of young premarital adults in Yunnan, 0% in Zhejiang and Shaanxi (2001 to 2002) <a href="javascript:OpenRef('15829030','p');"><sup><b>12</b></sup></a>
+<br />     Data for Yunnan Province: 0.5% of CSW  in 1995 to 4.0% in 2007; MSM 4.0% in 2005 to 13.2% in 2007; male clients of CSW 0% during 1995 to 1997 to 1.8% in 2007; male STD clinic attendees 0% in 1992 to 2.1% in 2007; pregnant women  0.16% in 1992 to 0.5% in 2007; blood donors 0.0075% in 1992 to 0.084% in 2007 <a href="javascript:OpenRef('20104107','p');"><sup><b>13</b></sup></a>
+<br />     8.10% of villagers in Fuyang City, Anhui Province (2012 publication) <a href="javascript:OpenRef('22799161','p');"><sup><b>14</b></sup></a>
+<br />     0.06% of adults in Liangshan Prefecture, Sichuan Province (2011 publication) <a href="javascript:OpenRef('22027998','p');"><sup><b>15</b></sup></a>
+<br />     1.3% of adults with a history of commercial blood donation, in rural Shanxi Province (2004) <a href="javascript:OpenRef('21784304','p');"><sup><b>16</b></sup></a>
+<br />     1.3% of persons (13,500 living with HIV/AIDS)  in Dehong Prefecture, Yunnan Province (estimate, 2008 publication) <a href="javascript:OpenRef('18922804','p');"><sup><b>17</b></sup></a>
+<br />     0.1% of high-risk persons on Hainan Island - 69.2% of seropositives were needle-sharing drug users, 19.3% heterosexually acquired, 3.3% receivers of blood transfusion, 0.8% children born from HIV-1-infected mothers (1991 to 2006) <a href="javascript:OpenRef('19359980','p');"><sup><b>18</b></sup></a>
+<br />     2.5% of men who have sex with men (MSM) before 2004, 1.8% during 2004 to 2005 and 3.3% during 2006 to 2007 (literature review) <a href="javascript:OpenRef('21706940','p');"><sup><b>19</b></sup></a>
+<br />     3.5% of MSM in cohort studies and 6.7% in cross-sectional studies (meta-analysis, 2005 to 2010) <a href="javascript:OpenRef('21887251','p');"><sup><b>20</b></sup></a>
+<br />     10.49% of MSM in gay saunas, 2.12% in parks and 4.41% in gay bars (2013 publication) <a href="javascript:OpenRef('23458215','p');"><sup><b>21</b></sup></a>
+<br />     1.3% of MSM during 2003 to 2004; 2.4% during 2005 to 2006; 4.7% during 2007 to 2008 <a href="javascript:OpenRef('21857952','p');"><sup><b>22</b></sup></a> 
+<br />     0.7% to 4.67% of MSM (2003 publication) <a href="javascript:OpenRef('12826438','p');"><sup><b>23</b></sup></a> 
+<br />     0.9% of MSM in 2003, 6.3% in 2011 <a href="javascript:OpenRef('22884042','p');"><sup><b>24</b></sup></a>
+<br />     4.9% of MSM (61 cities, 2008) <a href="javascript:OpenRef('21658537','p');"><sup><b>25</b></sup></a>
+<br />     2.9% of MSM (7 provinces, 2010 publication) <a href="javascript:OpenRef('20104113','p');"><sup><b>26</b></sup></a>
+<br />     2.5% of MSM by meta-analysis (2001 to 2008) <a href="javascript:OpenRef('19351623','p');"><sup><b>27</b></sup></a>
+<br />     6.3% of MSM (14 cities, 2009 publication) <a href="javascript:OpenRef('20137520','p');"><sup><b>28</b></sup></a>
+<br />     0.4% of MSM in 2004; 4.6% in 2005; 5.8% in 2006 (Beijing) <a href="javascript:OpenRef('17577125','p');"><sup><b>29</b></sup></a>     
+<br />     5.1%, 5.8%, 7.8% and 3.4% of MSM in Beijing - depending on sampling method (2009) <a href="javascript:OpenRef('21711162','p');"><sup><b>30</b></sup></a>
+<br />     3.1% of MSM  in Beijing (2001 to 2002) <a href="javascript:OpenRef('16539574','p');"><sup><b>31</b></sup></a> <a href="javascript:OpenRef('12826438','p');"><sup><b>32</b></sup></a>
+<br />     2.1% of MSM  in Beijing (2005 to 2006) <a href="javascript:OpenRef('18172392','p');"><sup><b>33</b></sup></a>
+<br />     4.1% of MSM in Beijing (2008 publication) <a href="javascript:OpenRef('19082879','p');"><sup><b>34</b></sup></a>
+<br />     2.1% of MSM in Beijing (2005 to 2006) <a href="javascript:OpenRef('18172392','p');"><sup><b>35</b></sup></a>
+<br />     4.5% of MSM in Beijing (2011 publication) <a href="javascript:OpenRef('21426789','p');"><sup><b>36</b></sup></a>
+<br />     8.0% of MSM in Beijing (2012 publication) <a href="javascript:OpenRef('22248333','p');"><sup><b>37</b></sup></a>
+<br />     4.5% of MSM in Beijing in 2008 <a href="javascript:OpenRef('20510051','p');"><sup><b>38</b></sup></a> ; 5.0% in 2009
+<br />     4.8% of MSM in Beijing (2009) <a href="javascript:OpenRef('22336269','p');"><sup><b>39</b></sup></a>
+<br />     9.9% of MSM in Beijing (2011 publication) <a href="javascript:OpenRef('22076229','p');"><sup><b>40</b></sup></a>
+<br />     7.0% of MSM and 6.6% of bisexual males in Beijing, Harbin, Zhengzhou and Chengdu city (2008) <a href="javascript:OpenRef('22800630','p');"><sup><b>41</b></sup></a>
+<br />     5.9% of migrant MSM in Beijing (2012 publication) <a href="javascript:OpenRef('22788859','p');"><sup><b>42</b></sup></a>
+<br />     9.1% of MSM in Chengdu (2010 publication) <a href="javascript:OpenRef('20104114','p');"><sup><b>43</b></sup></a>
+<br />     8.5% of MSM in Chongqing (2008 publication) <a href="javascript:OpenRef('19141218','p');"><sup><b>44</b></sup></a>
+<br />     16.8% of MSM in Chongqing (2010 publication) <a href="javascript:OpenRef('20193376','p');"><sup><b>45</b></sup></a>
+<br />     5.5% of MSM in Chongqing (2009) <a href="javascript:OpenRef('22623994','p');"><sup><b>46</b></sup></a>
+<br />     11.7% of MSM in Chongqing (2010) <a href="javascript:OpenRef('23403605','p');"><sup><b>47</b></sup></a>
+<br />     10.6% to 10.8% of MSM in Chongqing (2006 to 2007) <a href="javascript:OpenRef('19565870','p');"><sup><b>48</b></sup></a> <a href="javascript:OpenRef('19955876','p');"><sup><b>49</b></sup></a>
+<br />     19.7% of MSM in Chongqing in 2006; 26.5% in 2007 <a href="javascript:OpenRef('19448559','p');"><sup><b>50</b></sup></a>
+<br />     10.9% of MSM in Chongging in 2006; 12.8% in 2007; 10.6% in 2008; 19.1% in 2009 <a href="javascript:OpenRef('22457314','p');"><sup><b>51</b></sup></a>
+<br />     5.2% of MSM in Guangzhou (respondent-driven survey, 2009 publication) <a href="javascript:OpenRef('19826942','p');"><sup><b>52</b></sup></a>
+<br />     5.2% of MSM in Guangzhou (respondent-driven survey, 2009 publication) <a href="javascript:OpenRef('19826942','p');"><sup><b>53</b></sup></a>
+<br />     5.70% of MSM in Guangzhou (2010) <a href="javascript:OpenRef('22366018','p');"><sup><b>54</b></sup></a>
+<br />     2.2% of MSM in Harbin (2006) <a href="javascript:OpenRef('17714786','p');"><sup><b>55</b></sup></a>
+<br />     1.0% of MSM in Harbin in 2006; 7.5% in 2009 <a href="javascript:OpenRef('22253304','p');"><sup><b>56</b></sup></a>
+<br />     5.8% of MSM in Jiangsu (2006 to 2007) <a href="javascript:OpenRef('19125142','p');"><sup><b>57</b></sup></a>
+<br />     0.5% of MSM in Jinan, Shandong (2008 publication) <a href="javascript:OpenRef('18259850','p');"><sup><b>58</b></sup></a>
+<br />     3.0% of MSM in Liaoning Province (2011 publication) <a href="javascript:OpenRef('21554742','p');"><sup><b>59</b></sup></a>
+<br />     3.9% of MSM in Taizhou city, Zhejiang province (2008 publication) <a href="javascript:OpenRef('19173880','p');"><sup><b>60</b></sup></a>
+<br />     6.7% of MSM in Beijing, Harbin, Zhengzhou and Chengdu (2011 publication) <a href="javascript:OpenRef('22198314','p');"><sup><b>61</b></sup></a>
+<br />     9.5% of MSM (3 cities, 2012 publication) <a href="javascript:OpenRef('22504598','p');"><sup><b>62</b></sup></a>
+<br />     8.2% of MSM in Yunnan (2012 publication) <a href="javascript:OpenRef('22968021','p');"><sup><b>63</b></sup></a>
+<br />     2.5% of bisexual and 2.6% of homosexual men, in Shandong (2011 publication) <a href="javascript:OpenRef('21923416','p');"><sup><b>64</b></sup></a>
+<br />     14.3% of male sex workers in Shenzhen (2008) <a href="javascript:OpenRef('19854703','p');"><sup><b>65</b></sup></a>
+<br />     6.0% of "money boys" (meta-analysis, 2012 publication) <a href="javascript:OpenRef('23209551','p');"><sup><b>66</b></sup></a>
+<br />     5.1% of "money boys" in Shandong Province (2010 publication) <a href="javascript:OpenRef('20578519','p');"><sup><b>67</b></sup></a>
+<br />     11.3% of "money boys" in Guangzhou Province (2011 publication) <a href="javascript:OpenRef('21215133','p');"><sup><b>68</b></sup></a>
+<br />     3.3% of "money boys" in Shenzhen (2011 publication) <a href="javascript:OpenRef('21800179','p');"><sup><b>69</b></sup></a>
+<br />     4.5% of "money boys" and 7.0% of MSM in Shenzhen (2012 publication) <a href="javascript:OpenRef('23191947','p');"><sup><b>70</b></sup></a>
+<br />     0% of women who have sex with women (2012 publication) <a href="javascript:OpenRef('22932073','p');"><sup><b>71</b></sup></a>
+<br />     0% of women who have sex with women (Beijing, 2010 to 2011) <a href="javascript:OpenRef('22943919','p');"><sup><b>72</b></sup></a>
+<br />     7.46% of hemophilia patients
+<br />     0.01322% of blood donors, nationwide (meta-analysis, 2002 to 2011) <a href="javascript:OpenRef('22686403','p');"><sup><b>73</b></sup></a>
+<br />     0.08% of blood donors (four centers, 2000 to 2010) <a href="javascript:OpenRef('22929614','p');"><sup><b>74</b></sup></a>
+<br />     0.02% of first-time blood donors in Xi'an (1999 to 2009) <a href="javascript:OpenRef('23195637','p');"><sup><b>75</b></sup></a>
+<br />     12.5% of former commercial plasma donors (and 2.1% of their spouses) in rural eastern China (1994 to 1995). <a href="javascript:OpenRef('16053750','p');"><sup><b>76</b></sup></a>
+<br />     1.3% of former commercial blood / plasma donors in rural Shanxi Province (2004) <a href="javascript:OpenRef('16791018','p');"><sup><b>77</b></sup></a>
+<br />     1.1% of truck drivers (1995)
+<br />     0.19% of long-distance truck drivers in China (meta-analysis, 1995 to 2010) <a href="javascript:OpenRef('23059625','p');"><sup><b>78</b></sup></a>
+<br />     0% of rural-to-urban migrants and 0% of permanent rural and urban residents in Zhejiang (2004) <a href="javascript:OpenRef('18457071','p');"><sup><b>79</b></sup></a>
+<br />     0.02% of migrant workers in Zhejiang (2013 publication) <a href="javascript:OpenRef('23451193','p');"><sup><b>80</b></sup></a>
+<br />     0.4% of miners in Yunnan (2006 publication) <a href="javascript:OpenRef('16737562','p');"><sup><b>81</b></sup></a>
+<br />     0.7% of miners in Yunnan (2006) <a href="javascript:OpenRef('20104111','p');"><sup><b>82</b></sup></a>
+<br />     0.7% of miners in Gejiu City, Yunnan Province (2006) <a href="javascript:OpenRef('17959049','p');"><sup><b>83</b></sup></a>
+<br />     0.4% of  pregnant women (rural areas, 1998)
+<br />     0.38% of pregnant women in Yunnan (2004) <a href="javascript:OpenRef('17107739','p');"><sup><b>84</b></sup></a>
+<br />     0% of women in child-bearing age in rural Shandong (2007 publication) <a href="javascript:OpenRef('17881863','p');"><sup><b>85</b></sup></a>
+<br />     0% to 0.4% of urban male STD patients (1998)
+<br />     0.7% of male STD clinic patients (4 provinces, 2009) <a href="javascript:OpenRef('22200257','p');"><sup><b>86</b></sup></a>
+<br />     0% to 10.3% of CSW (literature review, 1996 to 2010) <a href="javascript:OpenRef('21660747','p');"><sup><b>87</b></sup></a>
+<br />     0.3% of CSW in 1995; 0% to 2.3% in 1998
+<br />     0.26% of CSW (eight cities, 2013 publication) <a href="javascript:OpenRef('23390952','p');"><sup><b>88</b></sup></a>
+<br />     0.54% of CSW in southern China (2012 publication) <a href="javascript:OpenRef('23064536','p');"><sup><b>89</b></sup></a>
+<br />     2.4% of CSW in Kunming, Yunnan (2008 publication) <a href="javascript:OpenRef('18824623','p');"><sup><b>90</b></sup></a>
+<br />     13.0% of CSW in Yunnan (2012 publication) <a href="javascript:OpenRef('23033525','p');"><sup><b>91</b></sup></a>
+<br />     10.3% of female CSW in Kaiyuan City, Yunnan (2006) <a href="javascript:OpenRef('19158150','p');"><sup><b>92</b></sup></a>
+<br />     10% to 12% of CSW in Kaiyuan City, Yunnan (2006 to 2009) <a href="javascript:OpenRef('23026531','p');"><sup><b>93</b></sup></a>
+<br />     1.4% of female CSW in Guangzhou (1998 to 1999) <a href="javascript:OpenRef('11371690','p');"><sup><b>94</b></sup></a>
+<br />     0.8% of female CSW in Guangxi autonomous region (2012 publication) <a href="javascript:OpenRef('22274163','p');"><sup><b>95</b></sup></a>
+<br />     1.0% of CSW in Guangxi (2010) <a href="javascript:OpenRef('23438031','p');"><sup><b>96</b></sup></a>
+<br />     0.6% of urban CSW in southern China (2004 to 2005) <a href="javascript:OpenRef('16708055','p');"><sup><b>97</b></sup></a>
+<br />     0% of CSW in Hohot, Mongolia (2006 to 2008) <a href="javascript:OpenRef('23154177','p');"><sup><b>98</b></sup></a>
+<br />     10% of CSW in Yunnan (2005 publication) <a href="javascript:OpenRef('16375618','p');"><sup><b>99</b></sup></a>
+<br />     0.2% of CSW in Beijing in 2000; 0.6% in 2009
+<br />     10.1% of female CSW in Yunnan (2007 publication) <a href="javascript:OpenRef('17939384','p');"><sup><b>100</b></sup></a> 
+<br />     38% of drug-using CSW vs. 4% of non-drug-using CSW in Yunnan (2012 publication) <a href="javascript:OpenRef('23104743','p');"><sup><b>101</b></sup></a>
+<br />     8.3% of female CSW in Giju City and 1.8% of their miner clients (2008 publication) <a href="javascript:OpenRef('18354344','p');"><sup><b>102</b></sup></a>
+<br />     10.3% of female CSW in Kaiyuan City, Yunnan Province (2006) <a href="javascript:OpenRef('18718801','p');"><sup><b>103</b></sup></a>
+<br />     11.1% of female CSW in Kaiyuan City, Yunnan Province (2011 publication) <a href="javascript:OpenRef('21427428','p');"><sup><b>104</b></sup></a>
+<br />     2.3% of FSW in Liuzhou City, Guangxi Zhuang Autonomous Region, southern China (2009 publication) <a href="javascript:OpenRef('19323011','p');"><sup><b>105</b></sup></a>
+<br />     9.2% of male clients of CSW in Hekou County, Yunnan Province (2012 publication) <a href="javascript:OpenRef('23007705','p');"><sup><b>106</b></sup></a>
+<br />     5.5% of CSW in Hekou, on the Vietnam-China border (2012 publication) <a href="javascript:OpenRef('23228841','p');"><sup><b>107</b></sup></a>
+<br />     1.5% of male clients of CSW in Sichuan (2010 publication) <a href="javascript:OpenRef('20826867','p');"><sup><b>108</b></sup></a>
+<br />     6.2% of drug users and 9.2% of injecting drug users (2010 publication) <a href="javascript:OpenRef('21163100','p');"><sup><b>109</b></sup></a>
+<br />     0.4% of IDU in Hangzhou, Chongqing 7.5%, Guangzhou 2.9%, Shenyang 0.5%, Shanghai 0.32%, Kunming 16.25%, Beijing 2.6%, Tianjin 2.0%, Xi'an 1.25%, Wuhan 0.24%, Sanya 1.75%, Haikou 0.2%, Haerbin 1.1%, Nanjing 1.1% and  Qingdao 0.5% (2011 publication) <a href="javascript:OpenRef('21215121','p');"><sup><b>110</b></sup></a>
+<br />     12.55% of IDU (range 0% in Anui and Inner Mongolia, to 52.51% in Yunnan) vs. 1.05% of non-injecting drug users (literature review, 2009) <a href="javascript:OpenRef('19451325','p');"><sup><b>111</b></sup></a>
+<br />     5.4% of IDU - range 0% to 54% among different sites (2008 publication) <a href="javascript:OpenRef('18680587','p');"><sup><b>112</b></sup></a>
+<br />     21% of IDU in Yunnan (2003); 18% to 56% in southern cities of Guangdong and Guanxi (2002); 60% to 80% in some parts of Xinjiang; 82% in Yining (2000 publication) <a href="javascript:OpenRef('11860746','p');"><sup><b>113</b></sup></a>
+<br />     51.8% of IDU (three provinces, 2008 publication) <a href="javascript:OpenRef('18724872','p');"><sup><b>114</b></sup></a>
+<br />     8.3% of IDU in Beijing in 2005; 9.3% in 2009
+<br />     43.0% / 2.1% of methadone-dependent migrants / non-migrants in Beijing (2012 publication) <a href="javascript:OpenRef('23041679','p');"><sup><b>115</b></sup></a>
+<br />     0.99% of opiate users in Beijing (2004 to 2008) <a href="javascript:OpenRef('22175771','p');"><sup><b>116</b></sup></a>
+<br />     29% of IDU in Xinjiang (2007 publication) <a href="javascript:OpenRef('16831464','p');"><sup><b>117</b></sup></a>
+<br />     25% of IDU in rural Guangxi Province (2002) <a href="javascript:OpenRef('16968351','p');"><sup><b>118</b></sup></a>
+<br />     15.4% of IDU in Pingxiang City, Guangxi Province (1998) <a href="javascript:OpenRef('11317080','p');"><sup><b>119</b></sup></a>
+<br />     37% of IDU among Uigur minority persons in northwestern China (2008 publication) <a href="javascript:OpenRef('18363583','p');"><sup><b>120</b></sup></a>
+<br />     14.7% of IDU in Dongguan, Guangdong (2008) <a href="javascript:OpenRef('20137526','p');"><sup><b>121</b></sup></a>
+<br />     4.6% of IDU in Guangdong (2010 publication) <a href="javascript:OpenRef('21040549','p');"><sup><b>122</b></sup></a>
+<br />     0.7% of IDU on methadone maintenance, in Wuhan (2012 publication) <a href="javascript:OpenRef('23029149','p');"><sup><b>123</b></sup></a>
+<br />     25.5% of IDU in Yunnan (2012 publication) <a href="javascript:OpenRef('22916185','p');"><sup><b>124</b></sup></a>
+<br />     0.2% of IDU in Shandong (2009 to 2010) <a href="javascript:OpenRef('23394142','p');"><sup><b>125</b></sup></a>
+<br />     4.5% of amphetamine-type stimulant users in six provinces (2009 to 2010) <a href="javascript:OpenRef('22481605','p');"><sup><b>126</b></sup></a>
+<br />     33.7% of Chinese and 27.0% of Burmese IDU in the China-Burma border region (2011 publication) <a href="javascript:OpenRef('21283696','p');"><sup><b>127</b></sup></a>
+<br />
+<br />0.5% of HIV infections had been ascribed to transfusion as of 2000.  
+<br /> - 30,000 to 50,000 HIV infections as of 2000 were related to illegal plasma collection.
+<br />
+<br /><b>Associated infections:</b>
+<br /> - 6.3% of HIV-positive patients were HBV seropositive, 59.0% HCV, 96.6% EBV, 91.5% HSV-1 and 34.1% HSV-2 (Shanxi, Zhejiang, Yunnan and Xinjiang, 2011 publication) <a href="javascript:OpenRef('21422594','p');"><sup><b>128</b></sup></a>
+<br />   10.9% of HIV-positive patients nationwide were found to be HBsAg-positive, 15.31% in Guangxi, 15.19% in Guangdong and 14.36% in Shanghai (2009 to 2010) <a href="javascript:OpenRef('22998624','p');"><sup><b>129</b></sup></a>
+<br />   6.1% of HIV-positive patients in Urumqi were found to be HBsAg-positive and 24.8% anti-HCV-positive (2001 to 2010) <a href="javascript:OpenRef('23087203','p');"><sup><b>130</b></sup></a>
+<br />   29.0% / 13.3% (HSV-1) was identified in saliva samples from HIV-positive / HIV-negative patients ; 3.3% / 0% (HSV-2) ; 4.1% / 0% VZV; 82.0% / 36.7% EBV (Kunming, 2012 publication) <a href="javascript:OpenRef('23173318','p');"><sup><b>131</b></sup></a>
+<br /> - 56.9% of HIV-positive IDU were seropositive toward hepatitis C. <a href="javascript:OpenRef('14687492','p');"><sup><b>132</b></sup></a>
+<br />   78.6% of HIV-positive former blood donors were seropositive toward hepatitis C (Hubei, 2008 publication) <a href="javascript:OpenRef('18275341','p');"><sup><b>133</b></sup></a>
+<br />   19.4% of HIV-positive patients receiving HAART were seropositive toward hepatitis C (Beijing, 2005 to 2007) <a href="javascript:OpenRef('20431395','p');"><sup><b>134</b></sup></a>
+<br />   14.71% of HIV-positive patients nationwide were found to be HBC seropositive, 43.18% in Xinjiang, 39.06% in Henan and 27.36% in Yunnan (2009 to 2010) <a href="javascript:OpenRef('22998624','p');"><sup><b>135</b></sup></a>
+<br />   76.4% of HIV-positive patients vs. 2.5% of HIV-negative individuals were seropositive toward hepatitis C (Shanxi Province, 2010 publication) <a href="javascript:OpenRef('20545961','p');"><sup><b>136</b></sup></a>
+<br />   50.1% of HIV-positive patients in Henan and 12.0% in Guangxi were seropositive toward HCV (2012 publication) <a href="javascript:OpenRef('23226265','p');"><sup><b>137</b></sup></a>
+<br />   HIV-HCV coinfection was present in 11.3% of injecting drug abusers in Sichuan (2002). <a href="javascript:OpenRef('15162531','p');"><sup><b>138</b></sup></a> 
+<br />   41.83% of HIV-positive patients were found to be seropositive toward HCV and 12.49% were HBsAg-positive (2007 to 2008) <a href="javascript:OpenRef('20598209','p');"><sup><b>139</b></sup></a>
+<br />   41.2% of HIV-positive patients in Shandong were seropositive toward HCV, 12.6% HBsAg-positive and 19.6% seropositive for syphilis (2000 to 2010) <a href="javascript:OpenRef('23033517','p');"><sup><b>140</b></sup></a>
+<br />   83.6% of AIDS patients were co infected with hepatitis C, 2.3% are singly co infected with hepatitis B, and 5.5% co infected with HIV/HCV/HBV; 8.6% are only infected with HIV. (Zhengzhou, publication year 2006) <a href="javascript:OpenRef('17121227','p');"><sup><b>141</b></sup></a>
+<br />   9.6% of HIV-positive children receiving ART were seropositive toward hepatitis C, and 4.9% were HBsAg-positive (2009 publication) <a href="javascript:OpenRef('20032784','p');"><sup><b>142</b></sup></a>
+<br />   36.2% of HIV-patients initiating ART were seropositive toward HCV (2003 to 2009) <a href="javascript:OpenRef('22863110','p');"><sup><b>143</b></sup></a>
+<br /> - 35% of HIV-positive patients in Yunnan province were seropositive toward HSV-2 (2009 publication). <a href="javascript:OpenRef('20193582','p');"><sup><b>144</b></sup></a>
+<br />   91.3% of HIV-positive patients in Shanxi Province were seropositive toward HSV-1, and 20.5% toward HSV-2 (2010 publication) <a href="javascript:OpenRef('21055128','p');"><sup><b>145</b></sup></a>
+<br /> - Parvovirus B19 DNA was found in 4.5% of HIV-positive blood-donors and AIDS patients in Sichuan (Parvovirus 4 DNA, 2012 publication) <a href="javascript:OpenRef('22790259','p');"><sup><b>146</b></sup></a>
+<br /> - 87.7% of the patients with penicilliosis were found to be HIV-positive (1984 to 2009). <a href="javascript:OpenRef('22983901','p');"><sup><b>147</b></sup></a> 
+<br />   The first case of <i>Penicilliosis marneffei</i> in an HIV patient in China was reported in 1999 (Shenzhen). <a href="javascript:OpenRef('11776124','p');"><sup><b>148</b></sup></a>
+<br />   A review of 8 cases of Penicillium-HIV coinfection in Guangdong was published in 2005. <a href="javascript:OpenRef('16157038','p');"><sup><b>149</b></sup></a>
+<br /> - <i>Candida albicans</i> was responsible for 57.4% of invasive fungal infections in HIV-infected patients at a Chinese university hospital. (Shanghai, 2004 to 2006) <a href="javascript:OpenRef('17944709','p');"><sup><b>150</b></sup></a> 
+<br /> - 12.1% of HIV-infected patients in Shanghai city, Anhui province, and Henan Province were seropositive toward <i>Entamoeba histolytica</i> (2007 publication) <a href="javascript:OpenRef('17984335','p');"><sup><b>151</b></sup></a>
+<br /> - 0.48% of tuberculosis patients were HIV-positive in 2005 (WHO statistic).
+<br /> - Cryptosporidiosis was identified in 4.25% of AIDS patients in Yunnan and Guangdong (2009 publication) <a href="javascript:OpenRef('19469168','p');"><sup><b>152</b></sup></a>
+<br />   Cryptosporidiosis was identified in 12.3% of HIV-positive patients with chronic diarrhea (Beijing, 2009 to 2010) <a href="javascript:OpenRef('22321924','p');"><sup><b>153</b></sup></a>
+<br />   Cryptosporidiosis was identified in 8.3% of HIV-positive patients in Fuyang, Anhui province (3.0% of HIV-negative controls), hookworm 3.6%, trichuriasis 0.7%, ascariasis 0%, clonorchiasis 0.3%, giardiasis 1.3%, <i>Blastocystis hominis</i> 16.2% (2012 publication) <a href="javascript:OpenRef('22330320','p');"><sup><b>154</b></sup></a>
+<br />   Cryptosporidiosis was identified in 5.97% of HIV-positive patients with diarrhea in Beijing, 16.1% in Henan and 10.8% in Xinjiang (2011 publication) <a href="javascript:OpenRef('22340885','p');"><sup><b>155</b></sup></a>
+<br />    Cryptosporidiosis was found in 8.28% of HIV-positive patients in Fuyang City, Anhui Province (2012 publication) <a href="javascript:OpenRef('22590865','p');"><sup><b>156</b></sup></a>
+<br /> - <i>Enterocytozoon bieneusi</i> / <i>Cryptosporidium</i> was detected in 5.7% / 1.5 of HIV-positive patients and 4.2% / 0.5 of controls (2012 publication) <a href="javascript:OpenRef('23224097','p');"><sup><b>157</b></sup></a>
+<br /> - <i>Blastocystis hominis</i> infection was found in 17.11% of HIV-positive patients in Fuyang, Anhui province (2012 publication) <a href="javascript:OpenRef('23012954','p');"><sup><b>158</b></sup></a>
+<br />
+<br /><b><a name="outbreaks"></a>Notable outbreaks:</b>
+<br />     1994 to 1998 - An outbreak (92 cases) was reported among blood recipients in Hubei Province. <a href="javascript:OpenRef('20193375','p');"><sup><b>159</b></sup></a>
+<br />     2004 to 2005 - An outbreak (23 cases) of HIV infection among travelers from Taiwan was ascribed to needle-sharing in southwestern China. <a href="javascript:OpenRef('16760801','p');"><sup><b>160</b></sup></a>
+<br />
+<br /><b>Also see:</b>
+<br />     Hong Kong
+<br />     Macao
+<br />     Taiwan<br /><br /><b><a href="javascript:OpenRef('10040','G140');">List of all references</a></b><br />
+</span>
+	</td></tr>
+	</tbody></table>
+	
+	</td>
+    <td bgcolor="#A2A377"><img width="1" height="1" border="0" alt="" src="../images_n/clr.gif" /></td>
+    <td width="38" valign="top" bgcolor="#F7F0D9">
+	 
+		<a onmouseout="changeImages('image6', 'image6off', 'infoimage5', 'infoimagedefaultsave')" onmouseover="changeImages('image6', 'image6on', 'infoimage5', 'infoimage6')" href="javascript:OpenWin('G140','China','10040');"><img border="0" name="image6" src="../images/buttons_zoom_i.gif" alt="Zoom" title="Zoom" /></a>
+	     </td>
+  </tr>
+  <tr>
+    <td bgcolor="#A2A377" colspan="3"><img width="1" height="1" border="0" alt="" src="../images_n/clr.gif" /></td>
+    <td bgcolor="#F7F0D9"></td>
+    
+  </tr>
+</tbody></table>
+<br />
+<form name="noteForm" method="post">
+<table width="457" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td bgcolor="#F7F0D9" colspan="5">
+<!-- nested top row for rollover text -->
+<table cellspacing="0" cellpadding="0" border="0" bg="DDDC9F">
+	<tbody><tr>
+		<td><img width="136" height="16" border="0" src="../images_n/Gideon_Epidemio_personal_tab.gif" title="Personal Notes" alt="Personal Notes" /></td>
+		<td width="100%"></td>
+		<td><img width="81" height="16" border="0" name="infoimage5" src="../images_n/roll.gif" /></td>
+	</tr>
+</tbody></table>
+<!-- end nested top row -->
+	</td>
+  </tr>
+  <tr>
+    <td bgcolor="A2A377" colspan="2"><img width="1" height="1" border="0" src="../images_n/A2A377.gif" /></td>
+	<td bgcolor="#F7F0D9"><img width="1" height="1" border="0" src="../images_n/clr.gif" /></td>
+    <td bgcolor="#DDDC9F"><img width="1" height="1" border="0" src="../images_n/clr.gif" /></td>
+	<td bgcolor="#A2A377"><img width="1" height="1" border="0" src="../images_n/A2A377.gif" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="A2A377"><img width="1" height="1" border="0" src="../images_n/A2A377.gif" /></td>
+    <td valign="top" height="100%">
+<!-- nested center table -->	
+	<table cellspacing="0" cellpadding="0" border="0" bgcolor="#F7F0D9">
+	<tbody><tr>
+		<td valign="top"><textarea wrap="VIRTUAL" scroll="auto" cols="66" rows="5" name="txt" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid; BORDER-COLOR: ffffff" class="b"></textarea></td>
+	</tr>
+</tbody></table>
+<!-- end nested center table -->
+	</td>
+    <td bgcolor="A2A377"><img width="1" height="1" border="0" src="../images_n/A2A377.gif" /></td>
+    <td width="38" valign="top" bgcolor="DDDC9F"><a onmouseout="changeImages('image5', 'image5off', 'infoimage5', 'infoimagedefaultsave')" onmouseover="changeImages('image5', 'image5on', 'infoimage5', 'infoimage5')" href="javascript:savePersonalNotes()">
+<img width="38" height="32" border="0" name="image5" alt="Save note" title="Save note" src="../images_n/buttons_save_i.gif" /></a><br /><br /></td>
+    <td bgcolor="A2A377"><img width="1" height="1" border="0" src="../images_n/A2A377.gif" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="A2A377" colspan="5"><img width="1" height="1" border="0" src="../images_n/A2A377.gif" /></td>
+  </tr>
+</tbody></table>
+</form>
+</td>
+<td width="6"><img width="6" src="/images/spacer.gif" /></td>
+<td valign="top">
+<font face="arial,sans-serif" color="#000000" style="font-size:11px">Ads only display in free trial</font><br />
+<script type="text/javascript">&lt;!--
+google_ad_client = "pub-4506717501061964";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text";
+//2006-12-19: gideon - web
+google_ad_channel = "7350424146";
+google_color_border = "F7F0D9";
+google_color_bg = "F7F0D9";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--&gt;</script>
+<script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">
+  </script><ins style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><ins style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px" id="aswift_0_anchor"><iframe width="160" scrolling="no" height="600" frameborder="0" style="left:0;position:absolute;top:0;" name="aswift_0" id="aswift_0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" allowtransparency="true" hspace="0" vspace="0" marginheight="0" marginwidth="0"></iframe></ins></ins>
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+</body></html>
