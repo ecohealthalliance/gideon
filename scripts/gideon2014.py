@@ -34,7 +34,7 @@ for country in countries:
                                  country +
                                  "')]").click()
     print("Sleeping...")
-    sleep(random.lognormvariate(1.7,0.8))
+    sleep(random.lognormvariate(1.5,0.5))
     menulayer = driver.find_element_by_id('menuLayer')
     diseases = menulayer.find_elements_by_tag_name('a')
     diseases = map(lambda x: x.text, diseases)
@@ -45,9 +45,6 @@ for country in countries:
 
     print("Assigning that series to the diseases_by_country dict.")
     diseases_by_country[country] = diseases
-
-    print("Sleeping again...")
-    sleep(random.lognormvariate(1,0.5))
 
 diseases_by_country = pd.DataFrame(diseases_by_country)
 
